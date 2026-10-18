@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.sqlite3*
+*.log
+*_output.txt
+runs/
+data/
+qa/
+*.incomplete-tail
+*private_truth.jsonl
+*.zip

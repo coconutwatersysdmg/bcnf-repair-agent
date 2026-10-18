@@ -1,0 +1,8 @@
+This research repository includes an unchanged snapshot of the project owner's
+prior BCNF experimental code under vendor/legacy_bcnf. Its source description and
+file SHA-256 digests are recorded in vendor/snapshot.json. The new experiment
+layer is under repair_agent; original submission files are not modified.
+
+Public visibility does not itself grant an open-source license. No license or
+third-party paper redistribution rights are asserted by this initial prototype.
+Downloaded papers and private manuscripts are deliberately outside this repo.

@@ -1,0 +1,14 @@
+{
+  "source": "author prior BCNF experiments, unchanged snapshot",
+  "files": {
+    "common/__init__.py": "49823d077f10216ccc22848277f666cae94bdcf6f624166438129a3c7a140e24",
+    "common/types.py": "adedb2d2d70b161ff921526e060580afa0b0ad1ff4176d4a3e1a5aa07115f7c3",
+    "common/fd_utils.py": "bb759b82122a3f134c1654f3b8c228d00c2c8884ccaaa8772e8e8e257f3c1a2e",
+    "algorithms/__init__.py": "43518e44270ab316eaefa7a8bb046163949464f8c19816f1e79904711d354218",
+    "algorithms/bcnf_index.py": "7698752e40cbfad9d4c3e0a63e428951a93468c7ccb2990161a38d61ebc1cd7e",
+    "algorithms/incremental.py": "c1ce989f5583c2fc589a13725038ecbb17e1932d7b130dad42fb6ddcb435b4be",
+    "algorithms/fd_hash.py": "bfdd00e94d23636d5bc64096b9a10c834dc545fd097c9fbc1d07fd43ecb311f7",
+    "algorithms/general.py": "a752f8d48ac4f77d513d47a286022d1f454aee19b928f357fb408bc5959613ba",
+    "algorithms/singleton_fullscan.py": "9d289bfc3f482bcc2a1d5c56d98a4933cfe396ea9e78d0b329f51b85d9c4476b"
+  }
+}

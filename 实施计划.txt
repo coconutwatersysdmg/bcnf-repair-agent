@@ -1,0 +1,38 @@
+修复智能体实验项目实施计划 2026年10月18日
+Spec: ../详细实验方案与项目设计.docx，用户已同意实施。
+执行方式: executing-plans，在本会话逐项实现，完成后独立代码审阅。
+环境: Python 3.11及以上，核心仅标准库；绘图和Word构建使用可选依赖。
+隔离: 上级目录不是Git仓库，使用本项目目录，不修改原投稿算法；旧算法复制快照并校验。
+范围: 可信FD、字符串值、集合语义、无NULL、元组子集选择；不实现外键和属性值更新。
+
+任务1 数据与检查
+文件: repair_agent/domain.py, data_builder.py, checker.py, legacy.py; vendor; tests/test_core.py
+接口: validate_task(task); generate_dataset(path, count, seed, split); diagnose(task, ids); decision(task, ids, backend)
+测试先写并观察失败；实现后以穷举子集、随机FD、生成场景和快照校验验证。
+数据公开文件不含隐藏真值；未知或重复ID严格拒绝；原算法只能通过快照适配器使用。
+
+任务2 反馈、策略与运行
+文件: feedback.py, policies.py, runner.py; tests/test_runner.py
+接口: feedback(task, candidate, arm, budget); run_case(public_task, arm, client, config, repeat)
+测试: 布尔反馈不泄漏见证、UTF8字节预算、相同首轮消息、非法输出、重复状态、模拟标签、真值隔离。
+B0一次，B1/B2/B3最多5次，B3对照含同预算截断及随机选择；模拟模式绝不伪装真实模型。
+
+任务3 模型、缓存与预算
+文件: model_client.py, budget_cache.py, config.py; tests/test_budget_client.py
+SQLite单进程独占租约、持久化请求状态、请求前预留、超时费用保守保留、缓存跨重复隔离。
+Qwen/GLM仅官方HTTPS主机，禁止重定向泄漏密钥；无自动重试、无读取旧密钥文件。
+测试: 429/超时/畸形响应/usage缺失/长输出/预算/崩溃续跑/原子事务/相同请求不再计费。
+
+任务4 评估与命令行
+文件: evaluate.py, analyze.py, replay.py, cli.py, __main__.py; tests/test_cli.py
+接口: generate, run, evaluate, analyze, estimate, replay, verify, status, smoke。
+输出: JSONL轨迹、全部终态、CSV、配对聚类bootstrap、SVG图、预算账本、运行清单及数据hash。
+纯算法、模拟端到端及本地HTTP测试全部离线；真实模型运行必须显式--live。
+
+任务5 交付
+纯文本快速开始、PowerShell脚本、示例配置、Word操作手册、可移植项目ZIP。
+运行完整测试、离线端到端、故障测试、原算法hash检查；进行一次独立代码审阅并修复重要问题。
+不运行付费模型，真实模型效果未知，结果与报告明确标记SIMULATED或DETERMINISTIC。
+
+重点审阅: 标签泄漏；模型重复被缓存合并；请求超时重复计费；实验失败退出或从统计中消失；
+非BCNF/空候选/无FD；缺usage；同预算反馈；历史Prompt增长；未知ID；修改数据后续跑污染。

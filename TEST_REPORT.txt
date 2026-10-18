@@ -1,0 +1,41 @@
+Verification date: 2026-10-18
+Environment: Windows, bundled CPython; core uses standard library only.
+
+1. python -m unittest discover -s tests -v
+   PASS: 29 tests, no failures/errors.
+   Includes 30 randomized FD schemas x 64 subsets = 1920 candidates against
+   independent naive pairwise FD consistency and maximality definitions.
+   BCNF cases additionally compare original static and incremental backends.
+
+2. python -m repair_agent smoke --out runs/acceptance_20261018
+   PASS: 30 tasks x 5 arms x 2 repetitions = 300 final results.
+   Independent evaluation, CSV, JSON, SVG, and replay generated.
+
+3. All-arm acceptance on the same 30 synthetic tasks:
+   D0,D1,B0,B1,B2,B3,B3_truncate,B3_random; two repetitions.
+   PASS: 480/480 results evaluated; all three paired comparisons generated.
+   Replay: 720 saved candidate states, all checking backends agree.
+
+4. Original BCNF snapshot
+   PASS: 9 files match SHA-256 manifest; originals were not edited.
+
+5. Failure and recovery tests
+   Unknown/duplicate ids, hidden public fields, no FDs, empty table, nonBCNF,
+   feedback overflow, invalid JSON/output, context cap, repeated candidates,
+   missing usage, malformed response, HTTP 429, timeout, conservative uncertain
+   accounting, no automatic uncertain retry, cached reconstruction attribution,
+   interrupted JSONL tail, frozen-code/config/data resume, missing denominators.
+   All model transports in these tests are mocks; no real model API request.
+
+6. Independent code review
+   Important findings addressed: remove public value truth prefixes; preserve
+   original request cost/count on cached/uncertain recovery. Reverified.
+   Minor nonBCNF replay applicability issue resolved with explicit skip count.
+
+7. Word manual
+   Six pages exported using installed Word and inspected page by page.
+   Canonical LibreOffice renderer unavailable on this Windows runtime.
+
+No live model tested, no API cost incurred, no model-performance claim.
+SIMULATED results are engineering acceptance checks only.
+GitHub Actions workflow is included; its remote runs must be checked separately.
