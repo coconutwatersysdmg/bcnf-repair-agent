@@ -19,6 +19,14 @@ from .feedback import ARMS
 from .legacy import verify_snapshot
 from .run_io import write_json,read_jsonl,append_jsonl,RunLock
 
+def trailing_rate_limits(rows):
+    streak=0
+    for row in rows:
+        status=row.get('status')
+        if status=='HTTP_429':streak+=1
+        elif status!='REQUEST_UNCERTAIN':streak=0
+    return streak
+
 def code_hash():
     root=Path(__file__).parent
     content={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(root.glob('*.py'))}
@@ -54,17 +62,26 @@ def run_experiment(data,out,config,mode='simulate',arms=None,repeats=1,live=Fals
         keys=[(r['task_id'],r['arm'],r['repeat']) for r in previous]
         if len(keys)!=len(set(keys)):raise ValueError('duplicate completed run result')
         done=set(keys)
+        rate_limit_streak=trailing_rate_limits(previous)
+        halt_reason='CONSECUTIVE_HTTP_429' if rate_limit_streak>=3 else None
         with Store(out/'budget.sqlite3',config['budget_cny'],config['max_requests']) as book:
             client=SimulatedClient() if mode=='simulate' else ModelClient(config,book)
             for repeat in range(repeats):
+                if halt_reason:break
                 for task in tasks:
+                    if halt_reason:break
                     ordered=arms[:];random.Random(task['task_id']+':'+str(repeat)).shuffle(ordered)
                     for arm in ordered:
+                        if halt_reason:break
                         key=(task['task_id'],arm,repeat)
                         if key in done:continue
                         result=run_case(task,arm,client,config,repeat)
                         append_jsonl(out/'results.jsonl',result);done.add(key)
+                        if result['status']=='HTTP_429':rate_limit_streak+=1
+                        elif result['status']!='REQUEST_UNCERTAIN':rate_limit_streak=0
+                        if rate_limit_streak>=3:halt_reason='CONSECUTIVE_HTTP_429'
             summary=dict(completed=len(done),expected=len(tasks)*len(arms)*repeats,mode=identity['result_mode'],ledger=book.summary())
+            if halt_reason:summary['halt_reason']=halt_reason
             write_json(out/'run_summary.json',summary)
     return summary
 

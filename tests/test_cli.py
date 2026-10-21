@@ -2,12 +2,19 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from repair_agent.cli import main
+from repair_agent.cli import main, trailing_rate_limits
 from repair_agent.evaluate import evaluate_run
 from repair_agent.analyze import analyze_rows
 
 
 class CliTests(unittest.TestCase):
+    def test_rate_limit_streak_ignores_propagated_uncertain_results(self):
+        rows=[{'status':'HTTP_429'},{'status':'REQUEST_UNCERTAIN'},
+              {'status':'HTTP_429'},{'status':'HTTP_429'}]
+        self.assertEqual(trailing_rate_limits(rows),3)
+        rows.append({'status':'PASS'})
+        self.assertEqual(trailing_rate_limits(rows),0)
+
     def test_offline_end_to_end_resume_and_data_change_guard(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);data=root/'data';run=root/'run'
