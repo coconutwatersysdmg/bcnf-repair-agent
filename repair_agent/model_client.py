@@ -35,7 +35,7 @@ class ModelClient:
         if c['provider']=='qwen':body['enable_thinking']=False
         else:body['thinking']={'type':'disabled'}
         key=task_hash(dict(body=body,provider=c['provider'],url=c['base_url'],prompt_version=c['prompt_version'],
-            task_hash=task_hash(context['task']),arm=context['arm'],repeat=context['repeat'],round=context['round']))
+            task_hash=task_hash(context['task']),repeat=context['repeat'],round=context['round']))
         prior=self.store.lookup(key)
         if prior:
             if prior['status']!='done':raise PendingRequest('uncertain request is not automatically repeated',prior['cost_units']/1000000,1)

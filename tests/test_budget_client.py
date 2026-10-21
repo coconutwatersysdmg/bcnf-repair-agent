@@ -40,7 +40,7 @@ class BudgetTests(unittest.TestCase):
 
 
 class ClientTests(unittest.TestCase):
-    def context(self,repeat=0):return dict(task=task(),arm='B2',repeat=repeat,round=0)
+    def context(self,repeat=0,arm='B2'):return dict(task=task(),arm=arm,repeat=repeat,round=0)
     def config(self):
         c=defaults();c.update(max_requests=20,budget_cny=1);return c
 
@@ -57,9 +57,11 @@ class ClientTests(unittest.TestCase):
                 with patch.dict(os.environ,{'DASHSCOPE_API_KEY':'test-secret'}):
                     first=client.complete(first_messages(task()),self.context())
                     second=client.complete(first_messages(task()),self.context())
+                    across_arm=client.complete(first_messages(task()),self.context(arm='B3'))
                     third=client.complete(first_messages(task()),self.context(1))
                 self.assertEqual(len(calls),2)
                 self.assertFalse(first['cached']);self.assertTrue(second['cached'])
+                self.assertTrue(across_arm['cached'])
                 self.assertEqual(second['billed_cny'],0)
                 self.assertNotIn('test-secret',json.dumps(db.rows()))
 
