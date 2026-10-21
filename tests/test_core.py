@@ -35,9 +35,13 @@ class CoreTests(unittest.TestCase):
     def test_strict_ids_and_schema(self):
         t=task()
         for output in ['{"keep_ids":["bad"]}','{"keep_ids":["x1","x1"]}',
-                       '{"keep_ids":[1]}','[]','```json\n{}\n```']:
+                       '{"keep_ids":[1]}','[]','prefix\n```json\n{"keep_ids":[]}\n```',
+                       '```json\n{"keep_ids":[]}\n```\nsuffix',
+                       '```json\n{"keep_ids":[]}\n```\n```json\n{"keep_ids":[]}\n```']:
             with self.assertRaises(ValueError): parse_candidate(output,t)
         self.assertEqual(parse_candidate('{"keep_ids":[]}',t),[])
+        self.assertEqual(parse_candidate('```json\n{"keep_ids":[]}\n```',t),[])
+        self.assertEqual(parse_candidate('  ```JSON\r\n{"keep_ids":["x2"]}\r\n```  ',t),['x2'])
         for change in ['null','duplicate','hidden']:
             v=copy.deepcopy(t)
             if change=='null': v['records'][0]['values'][0]=None

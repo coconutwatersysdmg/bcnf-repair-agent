@@ -1,6 +1,7 @@
 """Strict public-task and candidate boundaries; hidden truth is never accepted here."""
 import hashlib
 import json
+import re
 
 TASK_FIELDS={'task_id','base_instance_id','split','schema','records','initial_keep_ids','source_evidence','category','family','track'}
 
@@ -56,6 +57,10 @@ def validate_task(t):
     return t
 
 def parse_candidate(text, task):
+    if not isinstance(text,str): raise ValueError('candidate must be text')
+    text=text.strip()
+    fenced=re.fullmatch(r'```json[ \t]*\r?\n(.*)\r?\n```',text,flags=re.IGNORECASE|re.DOTALL)
+    if fenced: text=fenced.group(1)
     obj=json.loads(text)
     if not isinstance(obj,dict) or set(obj)!={'keep_ids'}: raise ValueError('expected only keep_ids')
     return validate_ids(obj['keep_ids'],task)

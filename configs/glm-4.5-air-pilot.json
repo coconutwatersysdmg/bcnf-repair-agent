@@ -1,0 +1,19 @@
+{
+  "provider": "glm",
+  "model": "glm-4.5-air",
+  "base_url": "https://open.bigmodel.cn/api/paas/v4",
+  "input_price_cny": 0.8,
+  "output_price_cny": 6,
+  "price_checked_on": "2026-10-21",
+  "price_source": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+  "temperature": 0.2,
+  "max_output_tokens": 512,
+  "input_byte_cap": 15000,
+  "feedback_bytes": 1600,
+  "max_rounds": 5,
+  "max_requests": 200,
+  "budget_cny": 1,
+  "timeout_seconds": 60,
+  "backend": "bcnf",
+  "prompt_version": "v1"
+}
