@@ -12,6 +12,7 @@ __pycache__/
 runs/
 data/
 qa/
+.worktrees/
 *.incomplete-tail
 *private_truth.jsonl
 *.zip
