@@ -1,0 +1,19 @@
+{
+  "provider": "glm",
+  "model": "glm-4.7-flash",
+  "base_url": "https://open.bigmodel.cn/api/paas/v4",
+  "input_price_cny": 0,
+  "output_price_cny": 0,
+  "price_checked_on": "2026-10-18",
+  "price_source": "https://www.zhipuai.cn/zh/news/148",
+  "temperature": 0.2,
+  "max_output_tokens": 2048,
+  "input_byte_cap": 15000,
+  "feedback_bytes": 1600,
+  "max_rounds": 5,
+  "max_requests": 200,
+  "budget_cny": 3.0,
+  "timeout_seconds": 60,
+  "backend": "bcnf",
+  "prompt_version": "v1-pilot-connect"
+}

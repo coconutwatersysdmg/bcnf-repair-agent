@@ -1,0 +1,14 @@
+﻿snapshot_time=2026-10-23 13:11:43
+source=runs\qwen_theory_main_20261022
+results_lines=4054
+expected=6300
+status_json:
+{
+  "attempts": 9398,
+  "cost_cny": 9.436844,
+  "uncertain_requests": 4,
+  "budget_cny": 100.0,
+  "max_requests": 60000
+}
+
+note=Partial overnight snapshot after resume; run may still be in progress. runs/ and data/ remain gitignored.
