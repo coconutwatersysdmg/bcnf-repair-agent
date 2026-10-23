@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 from repair_agent.domain import validate_task, parse_candidate, task_hash
-from repair_agent.data_builder import generate_dataset, load_tasks
+from repair_agent.data_builder import generate_dataset, generate_paired_dataset, load_tasks
 from repair_agent.checker import diagnose, decision, exhaustive_optimum
 from repair_agent.legacy import verify_snapshot, IncrementalSession
 
@@ -21,6 +21,29 @@ def task():
 
 
 class CoreTests(unittest.TestCase):
+    def test_paired_dataset_shares_base_table_and_hidden_truth(self):
+        with tempfile.TemporaryDirectory() as temp:
+            base=Path(temp)/'paired'
+            manifest=generate_paired_dataset(base,15,2026102301,'test',8)
+            public=load_tasks(base/'public.jsonl')
+            private=[json.loads(line) for line in (base/'private_truth.jsonl').read_text().splitlines()]
+            self.assertEqual(len(public),30)
+            self.assertEqual(manifest['pairs'],15)
+            by_base={}
+            for row in public: by_base.setdefault(row['base_instance_id'],[]).append(row)
+            truth={row['task_id']:row for row in private}
+            self.assertEqual(len(by_base),15)
+            for pair in by_base.values():
+                self.assertEqual({row['track'] for row in pair},{'C0','C1'})
+                left,right=sorted(pair,key=lambda row:row['track'])
+                for key in ('schema','records','initial_keep_ids','category','family'):
+                    self.assertEqual(left[key],right[key])
+                self.assertEqual(left['source_evidence'],{})
+                self.assertTrue(right['source_evidence'])
+                self.assertEqual(truth[left['task_id']]['true_ids'],truth[right['task_id']]['true_ids'])
+            cells={(row['family'],row['category'],row['track']) for row in public}
+            self.assertEqual(len(cells),30)
+
     def test_every_subset_matches_definition_and_legacy(self):
         t=validate_task(task())
         for mask in itertools.product([False,True],repeat=3):

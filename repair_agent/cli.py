@@ -10,7 +10,7 @@ from pathlib import Path
 from . import __version__
 from .domain import canonical,task_hash
 from .config import load_config,defaults
-from .data_builder import generate_dataset,load_tasks
+from .data_builder import generate_dataset,generate_paired_dataset,load_tasks
 from .runner import run_case
 from .policies import SimulatedClient
 from .model_client import ModelClient
@@ -90,6 +90,8 @@ def main(argv=None):
     subs=parser.add_subparsers(dest='command',required=True)
     gen=subs.add_parser('generate');gen.add_argument('--out',required=True);gen.add_argument('--count',type=int,default=60)
     gen.add_argument('--entities',type=int,default=20);gen.add_argument('--seed',type=int,default=42);gen.add_argument('--split',default='dev')
+    paired=subs.add_parser('generate-paired');paired.add_argument('--out',required=True);paired.add_argument('--pairs',type=int,default=90)
+    paired.add_argument('--entities',type=int,default=8);paired.add_argument('--seed',type=int,default=2026102301);paired.add_argument('--split',default='test')
     run=subs.add_parser('run');run.add_argument('--data',required=True);run.add_argument('--out',required=True)
     run.add_argument('--config');run.add_argument('--mode',choices=['simulate','live'],default='simulate');run.add_argument('--live',action='store_true')
     run.add_argument('--arms',default='D0,B0,B1,B2,B3');run.add_argument('--repeats',type=int,default=1)
@@ -102,6 +104,7 @@ def main(argv=None):
     smoke=subs.add_parser('smoke');smoke.add_argument('--out',required=True)
     args=parser.parse_args(argv)
     if args.command=='generate':result=generate_dataset(args.out,args.count,args.seed,args.split,args.entities)
+    elif args.command=='generate-paired':result=generate_paired_dataset(args.out,args.pairs,args.seed,args.split,args.entities)
     elif args.command=='run':result=run_experiment(args.data,args.out,load_config(args.config),args.mode,args.arms.split(','),args.repeats,args.live)
     elif args.command=='evaluate':
         from .evaluate import evaluate_run

@@ -1,12 +1,21 @@
 import json
 import unittest
 from test_core import task
-from repair_agent.feedback import make_feedback
+from repair_agent.feedback import make_feedback, parse_feedback_arm
 from repair_agent.runner import run_case, first_messages
 from repair_agent.policies import SimulatedClient, ScriptedClient
 
 
 class RunnerTests(unittest.TestCase):
+    def test_budget_suffix_selects_policy_and_exact_byte_limit(self):
+        self.assertEqual(parse_feedback_arm('B3_192'),('B3',192))
+        self.assertEqual(parse_feedback_arm('B3_truncate_384'),('B3_truncate',384))
+        self.assertEqual(parse_feedback_arm('B3_random_192'),('B3_random',192))
+        with self.assertRaises(ValueError): parse_feedback_arm('B3_0')
+        with self.assertRaises(ValueError): parse_feedback_arm('B3_other_192')
+        text=make_feedback(task(),['x1','x2'],'B3_192',1600,0)
+        self.assertLessEqual(len(text.encode('utf-8')),192)
+
     def test_boolean_feedback_has_no_witness(self):
         t=task()
         text=make_feedback(t,['x1','x2'],'B1',200)

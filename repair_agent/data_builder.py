@@ -3,6 +3,8 @@ import hashlib
 import itertools
 import json
 import random
+import copy
+import tempfile
 from pathlib import Path
 from .domain import canonical, validate_task, task_hash
 from .checker import greedy_repair
@@ -90,6 +92,49 @@ def generate_dataset(path,count=60,seed=42,split='dev',entities=20):
         (path/filename).write_text(''.join(canonical(r)+'\n' for r in records),encoding='utf-8')
     manifest=dict(version=2,seed=seed,split=split,count=count,entities=entities,
         cells=[dict(family=f,category=c,track=t,count=sum(x['family']==f and x['category']==c and x['track']==t for x in public)) for f,c,t in cells],
+        hashes={name:hashlib.sha256((path/name).read_bytes()).hexdigest() for name in ('public.jsonl','private_truth.jsonl')})
+    (path/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
+    return manifest
+
+def generate_paired_dataset(path,pairs=90,seed=2026102301,split='test',entities=8):
+    path=Path(path)
+    if type(pairs) is not int or pairs<1:raise ValueError('invalid pairs')
+    if path.exists():raise FileExistsError('dataset directory already exists; choose a new path')
+    with tempfile.TemporaryDirectory() as temp:
+        source=Path(temp)/'source'
+        # The legacy generator rotates over family/category/track (30 cells).
+        # Taking every first track from 2*pairs rows yields one base per
+        # family/category cell before we create the controlled C0/C1 pair.
+        generate_dataset(source,pairs*2,seed,split,entities)
+        tasks=load_tasks(source/'public.jsonl')[::2]
+        truth_rows=[json.loads(line) for line in (source/'private_truth.jsonl').read_text(encoding='utf-8').splitlines() if line]
+    truth_by_task={row['task_id']:row for row in truth_rows}
+    public=[];private=[]
+    for task in tasks:
+        truth=truth_by_task[task['task_id']]
+        true_ids=set(truth['true_ids'])
+        rng=random.Random(hashlib.sha256(f"{task['base_instance_id']}:paired-evidence".encode()).hexdigest())
+        evidence={}
+        for rec in task['records']:
+            is_true=rec['id'] in true_ids
+            if task['category']=='ambiguous':score=round(rng.uniform(.30,.90),3)
+            else:score=round(rng.uniform(.35,.95) if is_true else rng.uniform(.20,.90),3)
+            evidence[rec['id']]=dict(source=f'source_{rng.randrange(4)}',score=score)
+        for track in ('C0','C1'):
+            paired=copy.deepcopy(task)
+            paired['task_id']=f"{task['task_id']}_{track}"
+            paired['track']=track
+            paired['source_evidence']={} if track=='C0' else evidence
+            validate_task(paired);public.append(paired)
+            private.append(dict(task_id=paired['task_id'],base_instance_id=paired['base_instance_id'],
+                true_ids=sorted(true_ids),task_hash=task_hash(paired),injection_count=truth['injection_count']))
+    path.mkdir(parents=True)
+    for filename,records in [('public.jsonl',public),('private_truth.jsonl',private)]:
+        (path/filename).write_text(''.join(canonical(row)+'\n' for row in records),encoding='utf-8')
+    cells=[dict(family=f,category=c,track=t,
+        count=sum(row['family']==f and row['category']==c and row['track']==t for row in public))
+        for f,c,t in itertools.product(FAMILIES,CATEGORIES,('C0','C1'))]
+    manifest=dict(version=3,seed=seed,split=split,pairs=pairs,count=len(public),entities=entities,cells=cells,
         hashes={name:hashlib.sha256((path/name).read_bytes()).hexdigest() for name in ('public.jsonl','private_truth.jsonl')})
     (path/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
     return manifest

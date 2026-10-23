@@ -1,0 +1,19 @@
+{
+  "provider": "qwen",
+  "model": "qwen3.7-flash-2026-07-15",
+  "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "input_price_cny": 0.2,
+  "output_price_cny": 0.8,
+  "price_checked_on": "2026-10-18",
+  "price_source": "https://help.aliyun.com/zh/model-studio/model-pricing",
+  "temperature": 0.2,
+  "max_output_tokens": 2048,
+  "input_byte_cap": 15000,
+  "feedback_bytes": 1600,
+  "max_rounds": 5,
+  "max_requests": 2000,
+  "budget_cny": 2,
+  "timeout_seconds": 90,
+  "backend": "bcnf",
+  "prompt_version": "v2-confirm-paired-budgeted-20261023"
+}
