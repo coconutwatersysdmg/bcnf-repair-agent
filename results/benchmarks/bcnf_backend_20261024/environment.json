@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-10-24T02:44:44+0800",
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+  "logical_cpu_count": 20,
+  "timer": "time.perf_counter_ns",
+  "process_model": "single process",
+  "fullscan_max_rows": 10000
+}
