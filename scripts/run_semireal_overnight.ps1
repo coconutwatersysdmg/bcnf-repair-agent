@@ -5,6 +5,7 @@ Set-Location -LiteralPath $Root
 $LogDir = Join-Path $Root 'runs\semireal_overnight_20261024'
 New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
 $Log = Join-Path $LogDir 'overnight.log'
+Set-Content -LiteralPath $Log -Value '' -Encoding UTF8
 $Arms = 'D0,D1,B0,B1,B2,B3_192,B3_truncate_192,B3_random_192,B3_384,B3_truncate_384,B3_random_384'
 
 Add-Type -Namespace Experiment -Name NativeMethods -MemberDefinition @'
@@ -29,8 +30,15 @@ function Ensure-Key([string]$Name) {
 
 function Run-Python([string[]]$Arguments) {
     Log ('CMD python ' + ($Arguments -join ' '))
-    & python @Arguments *>> $Log
-    $code = $LASTEXITCODE
+    $previousErrorAction = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    try {
+        & python @Arguments 2>&1 | Out-File -LiteralPath $Log -Append -Encoding UTF8
+        $code = $LASTEXITCODE
+    }
+    finally {
+        $ErrorActionPreference = $previousErrorAction
+    }
     Log "EXIT $code"
     return $code
 }
