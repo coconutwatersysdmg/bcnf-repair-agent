@@ -1,0 +1,6 @@
+{
+  "checked_states": 9353,
+  "all_backends_agree": true,
+  "skipped_non_bcnf_results": 0,
+  "warning": "Small simulated traces do not establish large-scale speedups. Static timing includes snapshot verification/adapter overhead."
+}
