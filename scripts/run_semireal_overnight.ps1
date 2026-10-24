@@ -11,7 +11,7 @@ Add-Type -Namespace Experiment -Name NativeMethods -MemberDefinition @'
 [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
 public static extern uint SetThreadExecutionState(uint esFlags);
 '@
-$ES_CONTINUOUS = [uint32]0x80000000
+$ES_CONTINUOUS = [uint32]::Parse('80000000',[Globalization.NumberStyles]::HexNumber)
 $ES_SYSTEM_REQUIRED = [uint32]0x00000001
 
 function Log([string]$Message) {
