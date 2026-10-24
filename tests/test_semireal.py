@@ -121,6 +121,22 @@ class SemirealDatasetTests(unittest.TestCase):
                 self.assertEqual(len((path / "public.jsonl").read_text(encoding="utf-8").splitlines()), 10)
                 self.assertTrue((path / "README.md").is_file())
 
+    def test_build_entrypoint_uses_explicit_tag_for_independent_dataset(self):
+        from scripts.build_semireal_datasets import build_all
+
+        root = Path(__file__).resolve().parents[1]
+        with tempfile.TemporaryDirectory() as tmp:
+            outputs = build_all(
+                root / "sources" / "uci", Path(tmp), pairs=5, entities=8,
+                downloaded_on="2026-10-25", tag="rep90_20261025",
+                seed_base=2026102500,
+            )
+            self.assertEqual(outputs["bike"].name, "semireal_bike_rep90_20261025")
+            self.assertEqual(outputs["wdbc"].name, "semireal_wdbc_rep90_20261025")
+            manifest = json.loads((outputs["bike"] / "manifest.json").read_text(encoding="utf-8"))
+            self.assertEqual(manifest["base_instances"], 5)
+            self.assertEqual(manifest["seed"], 2026102501)
+
 
 if __name__ == "__main__":
     unittest.main()

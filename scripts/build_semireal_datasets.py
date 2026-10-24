@@ -24,22 +24,22 @@ def _sha256(path):
 
 
 def build_all(source_dir: Path, out_root: Path, pairs=30, entities=12,
-              downloaded_on="2026-10-24"):
+              downloaded_on="2026-10-24", tag="20261024", seed_base=2026102400):
     source_dir, out_root = Path(source_dir), Path(out_root)
     bike_archive = source_dir / "bike_sharing_275.zip"
     wdbc_archive = source_dir / "breast_cancer_diagnostic_17.zip"
     specs = {
         "bike": {
             "rows": load_bike_source(bike_archive), "key_fields": ["instant"],
-            "seed": 2026102401, "archive": bike_archive,
-            "out": out_root / "semireal_bike_20261024",
+            "seed": seed_base + 1, "archive": bike_archive,
+            "out": out_root / f"semireal_bike_{tag}",
             "url": "https://archive.ics.uci.edu/static/public/275/bike%2Bsharing%2Bdataset.zip",
             "doi": "10.24432/C5W894",
         },
         "wdbc": {
             "rows": load_wdbc_source(wdbc_archive), "key_fields": ["ID"],
-            "seed": 2026102402, "archive": wdbc_archive,
-            "out": out_root / "semireal_wdbc_20261024",
+            "seed": seed_base + 2, "archive": wdbc_archive,
+            "out": out_root / f"semireal_wdbc_{tag}",
             "url": "https://archive.ics.uci.edu/static/public/17/breast%2Bcancer%2Bwisconsin%2Bdiagnostic.zip",
             "doi": "10.24432/C5DW2B",
         },
@@ -67,8 +67,13 @@ def main():
     parser.add_argument("--pairs", type=int, default=30)
     parser.add_argument("--entities", type=int, default=12)
     parser.add_argument("--downloaded-on", default="2026-10-24")
+    parser.add_argument("--tag", default="20261024")
+    parser.add_argument("--seed-base", type=int, default=2026102400)
     args = parser.parse_args()
-    outputs = build_all(args.source_dir, args.out_root, args.pairs, args.entities, args.downloaded_on)
+    outputs = build_all(
+        args.source_dir, args.out_root, args.pairs, args.entities,
+        args.downloaded_on, args.tag, args.seed_base,
+    )
     for name, path in outputs.items():
         print(f"{name}={path}")
 

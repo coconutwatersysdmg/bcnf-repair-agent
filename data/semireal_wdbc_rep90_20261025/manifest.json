@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "domain": "wdbc",
+  "seed": 2026102502,
+  "split": "test",
+  "base_instances": 90,
+  "count": 180,
+  "entities": 12,
+  "source_row_count": 569,
+  "attributes": [
+    "ID",
+    "Diagnosis",
+    "radius1",
+    "texture1",
+    "perimeter1",
+    "area1",
+    "smoothness1",
+    "compactness1",
+    "concavity1",
+    "concave_points1"
+  ],
+  "key_fields": [
+    "ID"
+  ],
+  "category_counts": {
+    "clean": 36,
+    "residual": 36,
+    "over_deletion": 36,
+    "mixed": 36,
+    "ambiguous": 36
+  },
+  "source": {
+    "url": "https://archive.ics.uci.edu/static/public/17/breast%2Bcancer%2Bwisconsin%2Bdiagnostic.zip",
+    "license": "CC BY 4.0",
+    "doi": "10.24432/C5DW2B",
+    "archive_sha256": "bc154869ef13f753f9e2b5a17e248cfe1ba4b6721db7c4da9f4880e40b05d3af",
+    "archive_name": "breast_cancer_diagnostic_17.zip",
+    "downloaded_on": "2026-10-25"
+  },
+  "hashes": {
+    "public.jsonl": "e8a66234e4c0f6d3c38a82c99c1deb6b437f9cc93b02e7278a9de81bab2f3161",
+    "private_truth.jsonl": "b250f21965e50024ea1cb29d0da37d728fff7a1bb7867e3d69269685de0d6b0c"
+  }
+}
