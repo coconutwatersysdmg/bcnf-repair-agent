@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "domain": "bike",
+  "seed": 2026102401,
+  "split": "test",
+  "base_instances": 30,
+  "count": 60,
+  "entities": 12,
+  "source_row_count": 17379,
+  "attributes": [
+    "instant",
+    "dteday",
+    "season",
+    "hr",
+    "weathersit",
+    "temp",
+    "hum",
+    "windspeed",
+    "cnt"
+  ],
+  "key_fields": [
+    "instant"
+  ],
+  "category_counts": {
+    "clean": 12,
+    "residual": 12,
+    "over_deletion": 12,
+    "mixed": 12,
+    "ambiguous": 12
+  },
+  "source": {
+    "url": "https://archive.ics.uci.edu/static/public/275/bike%2Bsharing%2Bdataset.zip",
+    "license": "CC BY 4.0",
+    "doi": "10.24432/C5W894",
+    "archive_sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+    "archive_name": "bike_sharing_275.zip",
+    "downloaded_on": "2026-10-24"
+  },
+  "hashes": {
+    "public.jsonl": "f7b8f3fa2c456908b76450942071b20b0f2311f0f32e89d1941527c6a74bcdb8",
+    "private_truth.jsonl": "d9b5d3ee26c7abd41fbe67cb630ecedffec71631bf4b0e6b28c4fc894ff8dd89"
+  }
+}
