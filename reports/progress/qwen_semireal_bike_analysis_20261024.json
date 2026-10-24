@@ -1,0 +1,1505 @@
+{
+  "total_results": 660,
+  "modes": [
+    "DETERMINISTIC",
+    "LIVE"
+  ],
+  "groups": [
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D0",
+      "subset": "all",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 1.0,
+      "mean_f1": 0.8763888888888889,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 60
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D1",
+      "subset": "all",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 1.0,
+      "mean_f1": 0.8555555555555555,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 60
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B0",
+      "subset": "all",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.21666666666666667,
+      "mean_f1": 0.47302027557649745,
+      "mean_calls": 1,
+      "total_cost_cny": 0.074615,
+      "statuses": {
+        "INVALID_OUTPUT": 30,
+        "ROUND_LIMIT": 17,
+        "PASS": 13
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B1",
+      "subset": "all",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.6166666666666667,
+      "mean_f1": 0.9214439626396148,
+      "mean_calls": 2.6333333333333333,
+      "total_cost_cny": 0.163558,
+      "statuses": {
+        "PASS": 37,
+        "REPEATED_STATE": 23
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B2",
+      "subset": "all",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.9333333333333333,
+      "mean_f1": 0.9424848484848485,
+      "mean_calls": 2.5166666666666666,
+      "total_cost_cny": 0.162061,
+      "statuses": {
+        "PASS": 56,
+        "ROUND_LIMIT": 4
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_192",
+      "subset": "all",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.7666666666666667,
+      "mean_f1": 0.9327400281340811,
+      "mean_calls": 2.533333333333333,
+      "total_cost_cny": 0.166822,
+      "statuses": {
+        "PASS": 46,
+        "REPEATED_STATE": 12,
+        "ROUND_LIMIT": 2
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_384",
+      "subset": "all",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.7666666666666667,
+      "mean_f1": 0.9156598498120238,
+      "mean_calls": 2.7,
+      "total_cost_cny": 0.172659,
+      "statuses": {
+        "PASS": 46,
+        "ROUND_LIMIT": 13,
+        "REPEATED_STATE": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_192",
+      "subset": "all",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.8,
+      "mean_f1": 0.9348535547041295,
+      "mean_calls": 2.5,
+      "total_cost_cny": 0.164643,
+      "statuses": {
+        "PASS": 48,
+        "REPEATED_STATE": 11,
+        "ROUND_LIMIT": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_384",
+      "subset": "all",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.7166666666666667,
+      "mean_f1": 0.9168426417919171,
+      "mean_calls": 2.75,
+      "total_cost_cny": 0.175181,
+      "statuses": {
+        "PASS": 43,
+        "ROUND_LIMIT": 16,
+        "REPEATED_STATE": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_192",
+      "subset": "all",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.7666666666666667,
+      "mean_f1": 0.9327400281340811,
+      "mean_calls": 2.533333333333333,
+      "total_cost_cny": 0.166822,
+      "statuses": {
+        "PASS": 46,
+        "REPEATED_STATE": 12,
+        "ROUND_LIMIT": 2
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_384",
+      "subset": "all",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.7666666666666667,
+      "mean_f1": 0.9214531678734578,
+      "mean_calls": 2.716666666666667,
+      "total_cost_cny": 0.174274,
+      "statuses": {
+        "PASS": 46,
+        "ROUND_LIMIT": 14
+      }
+    }
+  ],
+  "by_family": [
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D0",
+      "subset": "semireal_bike",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 1.0,
+      "mean_f1": 0.8763888888888889,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 60
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D1",
+      "subset": "semireal_bike",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 1.0,
+      "mean_f1": 0.8555555555555555,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 60
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B0",
+      "subset": "semireal_bike",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.21666666666666667,
+      "mean_f1": 0.47302027557649745,
+      "mean_calls": 1,
+      "total_cost_cny": 0.074615,
+      "statuses": {
+        "INVALID_OUTPUT": 30,
+        "ROUND_LIMIT": 17,
+        "PASS": 13
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B1",
+      "subset": "semireal_bike",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.6166666666666667,
+      "mean_f1": 0.9214439626396148,
+      "mean_calls": 2.6333333333333333,
+      "total_cost_cny": 0.163558,
+      "statuses": {
+        "PASS": 37,
+        "REPEATED_STATE": 23
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B2",
+      "subset": "semireal_bike",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.9333333333333333,
+      "mean_f1": 0.9424848484848485,
+      "mean_calls": 2.5166666666666666,
+      "total_cost_cny": 0.162061,
+      "statuses": {
+        "PASS": 56,
+        "ROUND_LIMIT": 4
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_192",
+      "subset": "semireal_bike",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.7666666666666667,
+      "mean_f1": 0.9327400281340811,
+      "mean_calls": 2.533333333333333,
+      "total_cost_cny": 0.166822,
+      "statuses": {
+        "PASS": 46,
+        "REPEATED_STATE": 12,
+        "ROUND_LIMIT": 2
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_384",
+      "subset": "semireal_bike",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.7666666666666667,
+      "mean_f1": 0.9156598498120238,
+      "mean_calls": 2.7,
+      "total_cost_cny": 0.172659,
+      "statuses": {
+        "PASS": 46,
+        "ROUND_LIMIT": 13,
+        "REPEATED_STATE": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_192",
+      "subset": "semireal_bike",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.8,
+      "mean_f1": 0.9348535547041295,
+      "mean_calls": 2.5,
+      "total_cost_cny": 0.164643,
+      "statuses": {
+        "PASS": 48,
+        "REPEATED_STATE": 11,
+        "ROUND_LIMIT": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_384",
+      "subset": "semireal_bike",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.7166666666666667,
+      "mean_f1": 0.9168426417919171,
+      "mean_calls": 2.75,
+      "total_cost_cny": 0.175181,
+      "statuses": {
+        "PASS": 43,
+        "ROUND_LIMIT": 16,
+        "REPEATED_STATE": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_192",
+      "subset": "semireal_bike",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.7666666666666667,
+      "mean_f1": 0.9327400281340811,
+      "mean_calls": 2.533333333333333,
+      "total_cost_cny": 0.166822,
+      "statuses": {
+        "PASS": 46,
+        "REPEATED_STATE": 12,
+        "ROUND_LIMIT": 2
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_384",
+      "subset": "semireal_bike",
+      "n_tasks": 60,
+      "n_results": 60,
+      "pass_rate": 0.7666666666666667,
+      "mean_f1": 0.9214531678734578,
+      "mean_calls": 2.716666666666667,
+      "total_cost_cny": 0.174274,
+      "statuses": {
+        "PASS": 46,
+        "ROUND_LIMIT": 14
+      }
+    }
+  ],
+  "by_category": [
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D0",
+      "subset": "ambiguous",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 0.8055555555555556,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D0",
+      "subset": "clean",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D0",
+      "subset": "mixed",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 0.7847222222222222,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D0",
+      "subset": "over_deletion",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D0",
+      "subset": "residual",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 0.7916666666666666,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D1",
+      "subset": "ambiguous",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 0.7361111111111112,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D1",
+      "subset": "clean",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D1",
+      "subset": "mixed",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 0.7638888888888888,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D1",
+      "subset": "over_deletion",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D1",
+      "subset": "residual",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 0.7777777777777778,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B0",
+      "subset": "ambiguous",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.0,
+      "mean_f1": 0,
+      "mean_calls": 1,
+      "total_cost_cny": 0.024249,
+      "statuses": {
+        "INVALID_OUTPUT": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B0",
+      "subset": "clean",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 1,
+      "total_cost_cny": 0.005349,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B0",
+      "subset": "mixed",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.0,
+      "mean_f1": 0.19191297208538588,
+      "mean_calls": 1,
+      "total_cost_cny": 0.020064,
+      "statuses": {
+        "ROUND_LIMIT": 3,
+        "INVALID_OUTPUT": 9
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B0",
+      "subset": "over_deletion",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.0,
+      "mean_f1": 0.9565217391304348,
+      "mean_calls": 1,
+      "total_cost_cny": 0.005076,
+      "statuses": {
+        "ROUND_LIMIT": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B0",
+      "subset": "residual",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.08333333333333333,
+      "mean_f1": 0.21666666666666667,
+      "mean_calls": 1,
+      "total_cost_cny": 0.019877,
+      "statuses": {
+        "PASS": 1,
+        "INVALID_OUTPUT": 9,
+        "ROUND_LIMIT": 2
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B1",
+      "subset": "ambiguous",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.9166666666666666,
+      "mean_f1": 0.9408212560386473,
+      "mean_calls": 2.75,
+      "total_cost_cny": 0.045788999999999996,
+      "statuses": {
+        "PASS": 11,
+        "REPEATED_STATE": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B1",
+      "subset": "clean",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 1,
+      "total_cost_cny": 0.005349,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B1",
+      "subset": "mixed",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.4166666666666667,
+      "mean_f1": 0.831422402074576,
+      "mean_calls": 3.4166666666666665,
+      "total_cost_cny": 0.048274,
+      "statuses": {
+        "REPEATED_STATE": 7,
+        "PASS": 5
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B1",
+      "subset": "over_deletion",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.08333333333333333,
+      "mean_f1": 0.9601449275362319,
+      "mean_calls": 3.1666666666666665,
+      "total_cost_cny": 0.019777,
+      "statuses": {
+        "REPEATED_STATE": 11,
+        "PASS": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B1",
+      "subset": "residual",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.6666666666666666,
+      "mean_f1": 0.8748312275486189,
+      "mean_calls": 2.8333333333333335,
+      "total_cost_cny": 0.044369,
+      "statuses": {
+        "PASS": 8,
+        "REPEATED_STATE": 4
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B2",
+      "subset": "ambiguous",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 0.9652777777777778,
+      "mean_calls": 3.0833333333333335,
+      "total_cost_cny": 0.051384,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B2",
+      "subset": "clean",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 1,
+      "total_cost_cny": 0.005349,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B2",
+      "subset": "mixed",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.75,
+      "mean_f1": 0.8957575757575758,
+      "mean_calls": 3.6666666666666665,
+      "total_cost_cny": 0.053329,
+      "statuses": {
+        "PASS": 9,
+        "ROUND_LIMIT": 3
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B2",
+      "subset": "over_deletion",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 2,
+      "total_cost_cny": 0.010926,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B2",
+      "subset": "residual",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.9166666666666666,
+      "mean_f1": 0.8513888888888889,
+      "mean_calls": 2.8333333333333335,
+      "total_cost_cny": 0.041073,
+      "statuses": {
+        "PASS": 11,
+        "ROUND_LIMIT": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_192",
+      "subset": "ambiguous",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.6666666666666666,
+      "mean_f1": 0.933166935050993,
+      "mean_calls": 3.1666666666666665,
+      "total_cost_cny": 0.05205,
+      "statuses": {
+        "PASS": 8,
+        "REPEATED_STATE": 2,
+        "ROUND_LIMIT": 2
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_192",
+      "subset": "clean",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 1,
+      "total_cost_cny": 0.005349,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_192",
+      "subset": "mixed",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.5833333333333334,
+      "mean_f1": 0.8518518518518519,
+      "mean_calls": 3.5,
+      "total_cost_cny": 0.05185,
+      "statuses": {
+        "REPEATED_STATE": 5,
+        "PASS": 7
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_192",
+      "subset": "over_deletion",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 2,
+      "total_cost_cny": 0.010926,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_192",
+      "subset": "residual",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.5833333333333334,
+      "mean_f1": 0.8786813537675606,
+      "mean_calls": 3,
+      "total_cost_cny": 0.046647,
+      "statuses": {
+        "PASS": 7,
+        "REPEATED_STATE": 5
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_384",
+      "subset": "ambiguous",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.75,
+      "mean_f1": 0.9101495726495726,
+      "mean_calls": 3.5,
+      "total_cost_cny": 0.057065,
+      "statuses": {
+        "PASS": 9,
+        "ROUND_LIMIT": 3
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_384",
+      "subset": "clean",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 1,
+      "total_cost_cny": 0.005349,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_384",
+      "subset": "mixed",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.3333333333333333,
+      "mean_f1": 0.8018824894911851,
+      "mean_calls": 3.9166666666666665,
+      "total_cost_cny": 0.053325,
+      "statuses": {
+        "ROUND_LIMIT": 7,
+        "PASS": 4,
+        "REPEATED_STATE": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_384",
+      "subset": "over_deletion",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 2,
+      "total_cost_cny": 0.010926,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_384",
+      "subset": "residual",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.75,
+      "mean_f1": 0.8662671869193609,
+      "mean_calls": 3.0833333333333335,
+      "total_cost_cny": 0.045994,
+      "statuses": {
+        "PASS": 9,
+        "ROUND_LIMIT": 3
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_192",
+      "subset": "ambiguous",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.75,
+      "mean_f1": 0.9367901234567901,
+      "mean_calls": 3.1666666666666665,
+      "total_cost_cny": 0.052041,
+      "statuses": {
+        "PASS": 9,
+        "REPEATED_STATE": 2,
+        "ROUND_LIMIT": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_192",
+      "subset": "clean",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 1,
+      "total_cost_cny": 0.005349,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_192",
+      "subset": "mixed",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.6666666666666666,
+      "mean_f1": 0.8587962962962963,
+      "mean_calls": 3.3333333333333335,
+      "total_cost_cny": 0.04968,
+      "statuses": {
+        "REPEATED_STATE": 4,
+        "PASS": 8
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_192",
+      "subset": "over_deletion",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 2,
+      "total_cost_cny": 0.010926,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_192",
+      "subset": "residual",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.5833333333333334,
+      "mean_f1": 0.8786813537675606,
+      "mean_calls": 3,
+      "total_cost_cny": 0.046647,
+      "statuses": {
+        "PASS": 7,
+        "REPEATED_STATE": 5
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_384",
+      "subset": "ambiguous",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.5833333333333334,
+      "mean_f1": 0.9136609686609687,
+      "mean_calls": 3.6666666666666665,
+      "total_cost_cny": 0.059567,
+      "statuses": {
+        "PASS": 7,
+        "ROUND_LIMIT": 5
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_384",
+      "subset": "clean",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 1,
+      "total_cost_cny": 0.005349,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_384",
+      "subset": "mixed",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.3333333333333333,
+      "mean_f1": 0.8028351144293173,
+      "mean_calls": 3.9166666666666665,
+      "total_cost_cny": 0.053468,
+      "statuses": {
+        "ROUND_LIMIT": 7,
+        "PASS": 4,
+        "REPEATED_STATE": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_384",
+      "subset": "over_deletion",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 2,
+      "total_cost_cny": 0.010926,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_384",
+      "subset": "residual",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.6666666666666666,
+      "mean_f1": 0.8677171258692997,
+      "mean_calls": 3.1666666666666665,
+      "total_cost_cny": 0.045871,
+      "statuses": {
+        "PASS": 8,
+        "ROUND_LIMIT": 4
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_192",
+      "subset": "ambiguous",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.6666666666666666,
+      "mean_f1": 0.933166935050993,
+      "mean_calls": 3.1666666666666665,
+      "total_cost_cny": 0.05205,
+      "statuses": {
+        "PASS": 8,
+        "REPEATED_STATE": 2,
+        "ROUND_LIMIT": 2
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_192",
+      "subset": "clean",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 1,
+      "total_cost_cny": 0.005349,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_192",
+      "subset": "mixed",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.5833333333333334,
+      "mean_f1": 0.8518518518518519,
+      "mean_calls": 3.5,
+      "total_cost_cny": 0.05185,
+      "statuses": {
+        "REPEATED_STATE": 5,
+        "PASS": 7
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_192",
+      "subset": "over_deletion",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 2,
+      "total_cost_cny": 0.010926,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_192",
+      "subset": "residual",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.5833333333333334,
+      "mean_f1": 0.8786813537675606,
+      "mean_calls": 3,
+      "total_cost_cny": 0.046647,
+      "statuses": {
+        "PASS": 7,
+        "REPEATED_STATE": 5
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_384",
+      "subset": "ambiguous",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.5,
+      "mean_f1": 0.9005650522317189,
+      "mean_calls": 3.6666666666666665,
+      "total_cost_cny": 0.059819,
+      "statuses": {
+        "PASS": 6,
+        "ROUND_LIMIT": 6
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_384",
+      "subset": "clean",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 1,
+      "total_cost_cny": 0.005349,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_384",
+      "subset": "mixed",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.5833333333333334,
+      "mean_f1": 0.8538845816019729,
+      "mean_calls": 3.75,
+      "total_cost_cny": 0.053552,
+      "statuses": {
+        "ROUND_LIMIT": 5,
+        "PASS": 7
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_384",
+      "subset": "over_deletion",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 1.0,
+      "mean_f1": 1.0,
+      "mean_calls": 2,
+      "total_cost_cny": 0.010926,
+      "statuses": {
+        "PASS": 12
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_384",
+      "subset": "residual",
+      "n_tasks": 12,
+      "n_results": 12,
+      "pass_rate": 0.75,
+      "mean_f1": 0.8528162055335968,
+      "mean_calls": 3.1666666666666665,
+      "total_cost_cny": 0.044628,
+      "statuses": {
+        "PASS": 9,
+        "ROUND_LIMIT": 3
+      }
+    }
+  ],
+  "by_track": [
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D0",
+      "subset": "C0",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 1.0,
+      "mean_f1": 0.8722222222222222,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 30
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D0",
+      "subset": "C1",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 1.0,
+      "mean_f1": 0.8805555555555555,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 30
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D1",
+      "subset": "C0",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 1.0,
+      "mean_f1": 0.8555555555555555,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 30
+      }
+    },
+    {
+      "mode": "DETERMINISTIC",
+      "arm": "D1",
+      "subset": "C1",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 1.0,
+      "mean_f1": 0.8555555555555555,
+      "mean_calls": 0,
+      "total_cost_cny": 0,
+      "statuses": {
+        "PASS": 30
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B0",
+      "subset": "C0",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.23333333333333334,
+      "mean_f1": 0.554736203326908,
+      "mean_calls": 1,
+      "total_cost_cny": 0.031777,
+      "statuses": {
+        "INVALID_OUTPUT": 12,
+        "ROUND_LIMIT": 11,
+        "PASS": 7
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B0",
+      "subset": "C1",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.2,
+      "mean_f1": 0.391304347826087,
+      "mean_calls": 1,
+      "total_cost_cny": 0.042838,
+      "statuses": {
+        "INVALID_OUTPUT": 18,
+        "ROUND_LIMIT": 6,
+        "PASS": 6
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B1",
+      "subset": "C0",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.5,
+      "mean_f1": 0.9507278443510327,
+      "mean_calls": 2.8,
+      "total_cost_cny": 0.079268,
+      "statuses": {
+        "PASS": 15,
+        "REPEATED_STATE": 15
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B1",
+      "subset": "C1",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.7333333333333333,
+      "mean_f1": 0.8921600809281969,
+      "mean_calls": 2.466666666666667,
+      "total_cost_cny": 0.08429,
+      "statuses": {
+        "PASS": 22,
+        "REPEATED_STATE": 8
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B2",
+      "subset": "C0",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.8666666666666667,
+      "mean_f1": 0.9738585858585859,
+      "mean_calls": 2.7333333333333334,
+      "total_cost_cny": 0.079316,
+      "statuses": {
+        "PASS": 26,
+        "ROUND_LIMIT": 4
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B2",
+      "subset": "C1",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 1.0,
+      "mean_f1": 0.9111111111111111,
+      "mean_calls": 2.3,
+      "total_cost_cny": 0.082745,
+      "statuses": {
+        "PASS": 30
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_192",
+      "subset": "C0",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.7333333333333333,
+      "mean_f1": 0.9610445517981749,
+      "mean_calls": 2.7333333333333334,
+      "total_cost_cny": 0.08354400000000001,
+      "statuses": {
+        "PASS": 22,
+        "REPEATED_STATE": 7,
+        "ROUND_LIMIT": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_192",
+      "subset": "C1",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.8,
+      "mean_f1": 0.9044355044699872,
+      "mean_calls": 2.3333333333333335,
+      "total_cost_cny": 0.083278,
+      "statuses": {
+        "PASS": 24,
+        "REPEATED_STATE": 5,
+        "ROUND_LIMIT": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_384",
+      "subset": "C0",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.7666666666666667,
+      "mean_f1": 0.9436998556998557,
+      "mean_calls": 2.8666666666666667,
+      "total_cost_cny": 0.081504,
+      "statuses": {
+        "PASS": 23,
+        "ROUND_LIMIT": 6,
+        "REPEATED_STATE": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_384",
+      "subset": "C1",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.7666666666666667,
+      "mean_f1": 0.8876198439241918,
+      "mean_calls": 2.533333333333333,
+      "total_cost_cny": 0.091155,
+      "statuses": {
+        "PASS": 23,
+        "ROUND_LIMIT": 7
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_192",
+      "subset": "C0",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.8,
+      "mean_f1": 0.9652716049382716,
+      "mean_calls": 2.6666666666666665,
+      "total_cost_cny": 0.081389,
+      "statuses": {
+        "PASS": 24,
+        "REPEATED_STATE": 6
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_192",
+      "subset": "C1",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.8,
+      "mean_f1": 0.9044355044699872,
+      "mean_calls": 2.3333333333333335,
+      "total_cost_cny": 0.083254,
+      "statuses": {
+        "PASS": 24,
+        "REPEATED_STATE": 5,
+        "ROUND_LIMIT": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_384",
+      "subset": "C0",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.6333333333333333,
+      "mean_f1": 0.9397022537312393,
+      "mean_calls": 2.966666666666667,
+      "total_cost_cny": 0.084133,
+      "statuses": {
+        "PASS": 19,
+        "ROUND_LIMIT": 10,
+        "REPEATED_STATE": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_random_384",
+      "subset": "C1",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.8,
+      "mean_f1": 0.893983029852595,
+      "mean_calls": 2.533333333333333,
+      "total_cost_cny": 0.091048,
+      "statuses": {
+        "PASS": 24,
+        "ROUND_LIMIT": 6
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_192",
+      "subset": "C0",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.7333333333333333,
+      "mean_f1": 0.9610445517981749,
+      "mean_calls": 2.7333333333333334,
+      "total_cost_cny": 0.08354400000000001,
+      "statuses": {
+        "PASS": 22,
+        "REPEATED_STATE": 7,
+        "ROUND_LIMIT": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_192",
+      "subset": "C1",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.8,
+      "mean_f1": 0.9044355044699872,
+      "mean_calls": 2.3333333333333335,
+      "total_cost_cny": 0.083278,
+      "statuses": {
+        "PASS": 24,
+        "REPEATED_STATE": 5,
+        "ROUND_LIMIT": 1
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_384",
+      "subset": "C0",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.7333333333333333,
+      "mean_f1": 0.9397877098746664,
+      "mean_calls": 2.933333333333333,
+      "total_cost_cny": 0.084264,
+      "statuses": {
+        "PASS": 22,
+        "ROUND_LIMIT": 8
+      }
+    },
+    {
+      "mode": "LIVE",
+      "arm": "B3_truncate_384",
+      "subset": "C1",
+      "n_tasks": 30,
+      "n_results": 30,
+      "pass_rate": 0.8,
+      "mean_f1": 0.9031186258722491,
+      "mean_calls": 2.5,
+      "total_cost_cny": 0.09000999999999999,
+      "statuses": {
+        "PASS": 24,
+        "ROUND_LIMIT": 6
+      }
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "left": "B2",
+      "right": "B1",
+      "n_base_instances": 30,
+      "difference": 0.31666666666666665,
+      "ci95": [
+        0.16666666666666666,
+        0.4666666666666667
+      ],
+      "method": "paired base-instance cluster bootstrap; repeats averaged within instance",
+      "draws": 2000,
+      "mode": "LIVE"
+    }
+  ],
+  "warning": ""
+}

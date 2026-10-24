@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "completed": 660,
+  "expected": 660,
+  "checks": {
+    "matrix_complete": true,
+    "no_duplicate_keys": true,
+    "paired_first_responses": true,
+    "budget_192_binds": true,
+    "budget_384_binds": true,
+    "policy_outputs_diverge": true,
+    "no_truth_key_in_results": true
+  },
+  "complete_first_response_groups": 60,
+  "first_response_mismatches": [],
+  "missing_first_response_groups": [],
+  "unique_failure_states": 190,
+  "over_budget_counts": {
+    "192": 160,
+    "384": 111
+  },
+  "over_budget_rates": {
+    "192": 0.8421052631578947,
+    "384": 0.5842105263157895
+  },
+  "policy_difference_counts": {
+    "192": 19,
+    "384": 120
+  }
+}
