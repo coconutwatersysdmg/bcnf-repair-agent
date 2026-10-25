@@ -13,7 +13,13 @@
   },
   "complete_first_response_groups": 539,
   "first_response_mismatches": [],
-  "missing_first_response_groups": [],
+  "missing_first_response_groups": [
+    {
+      "task_id": "t_356699b8de5dbcfc837e_C1",
+      "repeat": 1,
+      "present": []
+    }
+  ],
   "unique_failure_states": 1449,
   "over_budget_counts": {
     "192": 1132,

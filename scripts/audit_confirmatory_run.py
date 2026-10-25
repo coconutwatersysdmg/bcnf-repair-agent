@@ -39,7 +39,9 @@ def audit(run_path,min_policy_differences=3):
                 failure_states[(row['task_id'],row['repeat'],tuple(sorted(ids)))]=(tasks[row['task_id']],ids,row['repeat'])
     complete_first=0;first_mismatches=[];missing_first=[]
     expected_b=set(CONFIRM_ARMS)&set(manifest['arms'])
-    for key,arms in first.items():
+    expected_first=((task_id,repeat) for task_id in tasks for repeat in range(manifest['repeats']))
+    for key in expected_first:
+        arms=first.get(key,{})
         if set(arms)!=expected_b:missing_first.append(dict(task_id=key[0],repeat=key[1],present=sorted(arms)))
         elif len(set(arms.values()))!=1:first_mismatches.append(dict(task_id=key[0],repeat=key[1]))
         else:complete_first+=1
