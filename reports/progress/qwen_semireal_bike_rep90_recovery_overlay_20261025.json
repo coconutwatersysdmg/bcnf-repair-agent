@@ -1,0 +1,33 @@
+{
+  "derived": true,
+  "source_run": "runs\\qwen_semireal_bike_rep90_20261025",
+  "recovery_run": "runs\\qwen_semireal_bike_recovery_356699_20261025",
+  "task_id": "t_356699b8de5dbcfc837e_C1",
+  "repeat": 1,
+  "replaced_rows": 9,
+  "replaced_arms": [
+    "B0",
+    "B1",
+    "B2",
+    "B3_192",
+    "B3_384",
+    "B3_random_192",
+    "B3_random_384",
+    "B3_truncate_192",
+    "B3_truncate_384"
+  ],
+  "original_statuses": {
+    "B0": "REQUEST_UNCERTAIN",
+    "B1": "REQUEST_UNCERTAIN",
+    "B2": "REQUEST_UNCERTAIN",
+    "B3_192": "REQUEST_UNCERTAIN",
+    "B3_384": "REQUEST_UNCERTAIN",
+    "B3_random_192": "REQUEST_UNCERTAIN",
+    "B3_random_384": "REQUEST_UNCERTAIN",
+    "B3_truncate_192": "NETWORK_ERROR",
+    "B3_truncate_384": "REQUEST_UNCERTAIN"
+  },
+  "source_actual_cost_cny": 3.678135,
+  "actual_incremental_cost_cny": 0.019535,
+  "combined_actual_cost_cny": 3.69767
+}
