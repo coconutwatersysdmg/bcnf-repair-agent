@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="583" viewBox="0 0 1120 583">
+<rect width="100%" height="100%" fill="white"/>
+<text x="30" y="34" font-family="Arial" font-size="22" font-weight="700" fill="#0f172a">Paired evidence effect on formal repair rate</text>
+<text x="30" y="58" font-family="Arial" font-size="12" fill="#64748b">C1 − C0 · base-instance cluster bootstrap · 95% CI</text>
+<line x1="745.0" y1="72" x2="745.0" y2="555" stroke="#64748b" stroke-dasharray="4 4"/>
+<text x="30" y="92" font-family="Arial" font-size="11" fill="#334155">synthetic_confirmation · B0</text>
+<line x1="583.9" y1="88" x2="693.4" y2="88" stroke="#0f766e" stroke-width="2"/>
+<circle cx="641.9" cy="88" r="4" fill="#0f766e"/>
+<text x="1070" y="92" font-family="Arial" font-size="10" fill="#475569">-0.119</text>
+<text x="30" y="122" font-family="Arial" font-size="11" fill="#334155">synthetic_confirmation · B1</text>
+<line x1="893.2" y1="118" x2="1015.7" y2="118" stroke="#0f766e" stroke-width="2"/>
+<circle cx="954.5" cy="118" r="4" fill="#0f766e"/>
+<text x="1070" y="122" font-family="Arial" font-size="10" fill="#475569">+0.241</text>
+<text x="30" y="152" font-family="Arial" font-size="11" fill="#334155">synthetic_confirmation · B2</text>
+<line x1="783.7" y1="148" x2="877.1" y2="148" stroke="#0f766e" stroke-width="2"/>
+<circle cx="828.8" cy="148" r="4" fill="#0f766e"/>
+<text x="1070" y="152" font-family="Arial" font-size="10" fill="#475569">+0.096</text>
+<text x="30" y="182" font-family="Arial" font-size="11" fill="#334155">synthetic_confirmation · B3_192</text>
+<line x1="883.6" y1="178" x2="1018.9" y2="178" stroke="#0f766e" stroke-width="2"/>
+<circle cx="951.2" cy="178" r="4" fill="#0f766e"/>
+<text x="1070" y="182" font-family="Arial" font-size="10" fill="#475569">+0.237</text>
+<text x="30" y="212" font-family="Arial" font-size="11" fill="#334155">synthetic_confirmation · B3_384</text>
+<line x1="803.0" y1="208" x2="899.7" y2="208" stroke="#0f766e" stroke-width="2"/>
+<circle cx="848.1" cy="208" r="4" fill="#0f766e"/>
+<text x="1070" y="212" font-family="Arial" font-size="10" fill="#475569">+0.119</text>
+<text x="30" y="242" font-family="Arial" font-size="11" fill="#334155">semireal_bike · B0</text>
+<line x1="703.1" y1="238" x2="745.0" y2="238" stroke="#64748b" stroke-width="2"/>
+<circle cx="725.7" cy="238" r="4" fill="#64748b"/>
+<text x="1070" y="242" font-family="Arial" font-size="10" fill="#475569">-0.022</text>
+<text x="30" y="272" font-family="Arial" font-size="11" fill="#334155">semireal_bike · B1</text>
+<line x1="716.0" y1="268" x2="838.5" y2="268" stroke="#64748b" stroke-width="2"/>
+<circle cx="777.2" cy="268" r="4" fill="#64748b"/>
+<text x="1070" y="272" font-family="Arial" font-size="10" fill="#475569">+0.037</text>
+<text x="30" y="302" font-family="Arial" font-size="11" fill="#334155">semireal_bike · B2</text>
+<line x1="725.7" y1="298" x2="809.5" y2="298" stroke="#64748b" stroke-width="2"/>
+<circle cx="767.6" cy="298" r="4" fill="#64748b"/>
+<text x="1070" y="302" font-family="Arial" font-size="10" fill="#475569">+0.026</text>
+<text x="30" y="332" font-family="Arial" font-size="11" fill="#334155">semireal_bike · B3_192</text>
+<line x1="651.5" y1="328" x2="761.1" y2="328" stroke="#64748b" stroke-width="2"/>
+<circle cx="706.3" cy="328" r="4" fill="#64748b"/>
+<text x="1070" y="332" font-family="Arial" font-size="10" fill="#475569">-0.044</text>
+<text x="30" y="362" font-family="Arial" font-size="11" fill="#334155">semireal_bike · B3_384</text>
+<line x1="719.2" y1="358" x2="815.9" y2="358" stroke="#64748b" stroke-width="2"/>
+<circle cx="767.6" cy="358" r="4" fill="#64748b"/>
+<text x="1070" y="362" font-family="Arial" font-size="10" fill="#475569">+0.026</text>
+<text x="30" y="392" font-family="Arial" font-size="11" fill="#334155">semireal_wdbc · B0</text>
+<line x1="728.9" y1="388" x2="745.0" y2="388" stroke="#64748b" stroke-width="2"/>
+<circle cx="738.6" cy="388" r="4" fill="#64748b"/>
+<text x="1070" y="392" font-family="Arial" font-size="10" fill="#475569">-0.007</text>
+<text x="30" y="422" font-family="Arial" font-size="11" fill="#334155">semireal_wdbc · B1</text>
+<line x1="780.4" y1="418" x2="896.5" y2="418" stroke="#0f766e" stroke-width="2"/>
+<circle cx="838.5" cy="418" r="4" fill="#0f766e"/>
+<text x="1070" y="422" font-family="Arial" font-size="10" fill="#475569">+0.107</text>
+<text x="30" y="452" font-family="Arial" font-size="11" fill="#334155">semireal_wdbc · B2</text>
+<line x1="677.3" y1="448" x2="754.7" y2="448" stroke="#64748b" stroke-width="2"/>
+<circle cx="716.0" cy="448" r="4" fill="#64748b"/>
+<text x="1070" y="452" font-family="Arial" font-size="10" fill="#475569">-0.033</text>
+<text x="30" y="482" font-family="Arial" font-size="11" fill="#334155">semireal_wdbc · B3_192</text>
+<line x1="703.1" y1="478" x2="815.9" y2="478" stroke="#64748b" stroke-width="2"/>
+<circle cx="761.1" cy="478" r="4" fill="#64748b"/>
+<text x="1070" y="482" font-family="Arial" font-size="10" fill="#475569">+0.019</text>
+<text x="30" y="512" font-family="Arial" font-size="11" fill="#334155">semireal_wdbc · B3_384</text>
+<line x1="728.9" y1="508" x2="828.8" y2="508" stroke="#64748b" stroke-width="2"/>
+<circle cx="777.2" cy="508" r="4" fill="#64748b"/>
+<text x="1070" y="512" font-family="Arial" font-size="10" fill="#475569">+0.037</text>
+</svg>
