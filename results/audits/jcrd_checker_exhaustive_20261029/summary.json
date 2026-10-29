@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-29",
+  "protocol": "7 schema families x 5 deterministic seeds x all 128 subsets of 7 rows",
+  "reference": "Direct tuple-pair FD checking and exhaustive strict-superset enumeration",
+  "independent_candidates": 4480,
+  "categories": {
+    "consistent_nonmaximal": 1364,
+    "inconsistent": 2898,
+    "repair": 218
+  },
+  "by_family": {
+    "single": {
+      "consistent_nonmaximal": 98,
+      "inconsistent": 492,
+      "repair": 50
+    },
+    "dual": {
+      "consistent_nonmaximal": 59,
+      "inconsistent": 548,
+      "repair": 33
+    },
+    "composite": {
+      "consistent_nonmaximal": 425,
+      "repair": 15,
+      "inconsistent": 200
+    },
+    "redundant_lhs": {
+      "consistent_nonmaximal": 98,
+      "inconsistent": 492,
+      "repair": 50
+    },
+    "cycle": {
+      "consistent_nonmaximal": 44,
+      "inconsistent": 566,
+      "repair": 30
+    },
+    "trivial_only": {
+      "consistent_nonmaximal": 635,
+      "repair": 5
+    },
+    "empty_key": {
+      "consistent_nonmaximal": 5,
+      "repair": 35,
+      "inconsistent": 600
+    }
+  },
+  "backends": [
+    "BCNF index",
+    "FD hash",
+    "generic checker",
+    "incremental initialization"
+  ],
+  "all_match": true,
+  "scope": "Bounded exhaustive check; not an unbounded proof or timing benchmark",
+  "csv_sha256": "f774e01895761ebd86dd757facaa12d96dbe21489b179b4e80d9e38e2297d78d"
+}
